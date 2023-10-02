@@ -4,6 +4,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 
 
+
 // async function getChatGBTSummary() {
 
 //   // const configuration = new Configuration({
@@ -21,13 +22,12 @@ import { Configuration, OpenAIApi } from "openai";
 //   // })
 
 async function getChatGBTSummary(prompt, callback) {
-  const apiKey = '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';
+  const apiKey = process.env.NEXT_PUBLIC_OPEN_AI
 
   const API_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 
   // let prompt= 'Write a story about a brave knight.'
 
-  console.log(`Bearer ${apiKey}`, 'i want to check thisss')
 
   var option = {
     headers: {

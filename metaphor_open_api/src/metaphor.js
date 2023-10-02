@@ -1,11 +1,13 @@
 import axios from 'axios';
 
+
 const BASE_URL = 'https://api.metaphor.systems';
 
 let client;
 
 function initializeMetaphor() {
-  let apiKey = '56517314-545a-46b9-936c-da269e11867e'
+
+  let apiKey = `${process.env.NEXT_PUBLIC_METAPHOR}`
   let baseURL = 'https://api.metaphor.systems'
     client = axios.create({
         baseURL: baseURL,

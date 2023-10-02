@@ -95,7 +95,7 @@ function ModalSummary({props}) {
       })
     };
 
-    // fetchData();
+    fetchData();
   }, []);
 
   let closeHandle = () => {
